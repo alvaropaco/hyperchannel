@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('channel', {path: '/:slug'});
   });
 
+  this.route('welcome');
   this.route('settings');
 });
 
