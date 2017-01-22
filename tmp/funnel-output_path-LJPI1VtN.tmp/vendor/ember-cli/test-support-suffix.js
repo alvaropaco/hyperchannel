@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/tmp/funnel-input_base_path-XcYXKfDs.tmp/test-support-suffix.js

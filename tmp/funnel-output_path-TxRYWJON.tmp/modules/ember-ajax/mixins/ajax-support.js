@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/tmp/funnel-input_base_path-Q5raXBuC.tmp/mixins/ajax-support.js

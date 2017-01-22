@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/app/components/notification-topic-change/component.js

@@ -1,0 +1,11 @@
+define('ember-allpurpose/string/get-protocol', ['exports'], function (exports) {
+  'use strict';
+
+  exports['default'] = function (str) {
+    var colonIndex = str.indexOf(':');
+    if (colonIndex !== -1) {
+      return str.substr(0, colonIndex);
+    }
+    return '';
+  };
+});

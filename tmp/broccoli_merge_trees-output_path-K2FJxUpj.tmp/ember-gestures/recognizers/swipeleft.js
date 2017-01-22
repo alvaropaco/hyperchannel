@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/app/ember-gestures/recognizers/swipeleft.js

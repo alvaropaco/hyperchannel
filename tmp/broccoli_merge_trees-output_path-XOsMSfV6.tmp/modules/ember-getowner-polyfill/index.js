@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/tmp/broccoli_merge_trees-input_base_path-YcK5v9gR.tmp/23/modules/ember-getowner-polyfill/index.js

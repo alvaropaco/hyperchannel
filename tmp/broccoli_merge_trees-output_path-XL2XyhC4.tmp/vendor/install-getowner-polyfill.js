@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/node_modules/ember-getowner-polyfill/vendor/install-getowner-polyfill.js

@@ -1,0 +1,1 @@
+{"modulePrefix":"hyperchannel","environment":"test","rootURL":"/","locationType":"none","EmberENV":{"FEATURES":{}},"sockethubURL":"localhost:10550","APP":{"LOG_ACTIVE_GENERATION":false,"LOG_VIEW_LOOKUPS":false,"rootElement":"#ember-testing","name":"hyperchannel","version":"0.1.0+67eb55b1"},"exportApplicationGlobal":true}

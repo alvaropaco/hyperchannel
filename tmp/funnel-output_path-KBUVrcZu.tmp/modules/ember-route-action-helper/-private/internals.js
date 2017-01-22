@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/tmp/funnel-input_base_path-D1BSfV9u.tmp/-private/internals.js

@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/node_modules/ember-cli-app-version/app/components/app-version.js

@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/tmp/config_replace-output_path-bDqFPsPY.tmp/test-support-suffix.js

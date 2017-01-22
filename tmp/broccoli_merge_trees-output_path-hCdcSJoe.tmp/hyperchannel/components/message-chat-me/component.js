@@ -1,0 +1,1 @@
+/home/basti/src/kosmos/hyperchannel/app/components/message-chat-me/component.js
