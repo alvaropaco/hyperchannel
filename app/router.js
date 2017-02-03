@@ -13,6 +13,8 @@ Router.map(function() {
   });
 
   this.route('settings');
+
+  this.route('sockethub-bug');
 });
 
 export default Router;
