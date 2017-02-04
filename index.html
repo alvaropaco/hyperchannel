@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     
-<meta name="hyperchannel/config/environment" content="%7B%22modulePrefix%22%3A%22hyperchannel%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22sockethubURL%22%3A%22https%3A//sockethub.kosmos.org%3A10550%22%2C%22APP%22%3A%7B%22name%22%3A%22hyperchannel%22%2C%22version%22%3A%220.2.0+d11c9e9a%22%7D%2C%22publicLogsUrl%22%3A%22https%3A//storage.5apps.com/kosmos/public/chat-messages%22%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<meta name="hyperchannel/config/environment" content="%7B%22modulePrefix%22%3A%22hyperchannel%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22/%22%2C%22locationType%22%3A%22auto%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22sockethubURL%22%3A%22https%3A//sockethub.kosmos.org%3A10550%22%2C%22APP%22%3A%7B%22name%22%3A%22hyperchannel%22%2C%22version%22%3A%220.2.0+c293035f%22%7D%2C%22publicLogsUrl%22%3A%22https%3A//storage.5apps.com/kosmos/public/chat-messages%22%2C%22serviceWorker%22%3A%7B%22enabled%22%3Atrue%2C%22includeRegistration%22%3Atrue%2C%22debug%22%3Atrue%2C%22networkFirstURLs%22%3A%5B%7B%7D%2C%7B%7D%2C%7B%7D%5D%2C%22excludePaths%22%3A%5B%7B%7D%2C%22robots.txt%22%2C%22crossdomain.xml%22%5D%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
 
     <link rel="stylesheet" href="/assets/vendor.css" integrity="sha256-DXfb7soDsyy92XhUI0iGcFqay2z4upJ/CtnKcbqWbyQ= sha512-PhMkctL3v01z9Jj0gcl3CHRi1uQIpIeYwvFjF50a3NmYM5L43oiqHRPOV98JMVDUtSGqQabSMH9hqKP2XQseGw==" >
-    <link rel="stylesheet" href="/assets/hyperchannel.css" integrity="sha256-bd2meIXExBYbULmPujgo4xT02mTLsba1ts8ZPiai3d0= sha512-dwKiiI72a9POnwFXVSa3gNH2SLQdY4zOtt32xOKDtY2DibTJK9iiVeU1pD/hsxWsy2P1vf2zk5UctWX/fojxLQ==" >
+    <link rel="stylesheet" href="/assets/hyperchannel.css" integrity="sha256-71hf59L9MekCyrtqz1mCTipVG+k7T8rwmuWXF5fNml8= sha512-iiy7qa35IjeGWEz/5IgPR1c8WVZ2mKAM24gkWAxJfXXGN2/436I4RVUs0Wr0lHbKuRWo7WxwK0fTDSuiufWWXQ==" >
 
     
   </head>
@@ -19,13 +19,24 @@
     
 
     <script src="https://sockethub.kosmos.org:10550/activity-streams.js"></script>
-<script src="https://sockethub.kosmos.org:10550/sockethub/socket.io.js"></script>
+<script src="https://sockethub.kosmos.org:10550/socket.io.js"></script>
 <script src="https://sockethub.kosmos.org:10550/sockethub-client.js"></script>
 
 
-    <script src="/assets/vendor.js" integrity="sha256-1aSRIOIQrFyn69J1wwWu7DZzuXJLwTvPhuziwpv1qQw= sha512-goNHygLDczYQViUDSn0FdHiXpY4VCcraWYzri76qUc2fkxkPX7HAvF9aks6yAg5BxO9vENvyZn10Bofab+Negw==" ></script>
-    <script src="/assets/hyperchannel.js" integrity="sha256-jlvuIXDJcZRxLpn1mjL4v/lRzsbwvrZpNezknhro1PE= sha512-6UmozvL+l+uNKZsNQc+D2pU2zZWBWSoS5KspDaed9zmZ7USvRXr8FgOYFyC5PayVfuD6rw3ohkd3kXGMo51T4Q==" ></script>
+    <script src="/assets/vendor.js" integrity="sha256-L9VRZ50oEDEasPi9480Y+BzBDkwABNVghrAzM9C/OtI= sha512-xP8n9pAvXw57DFlxMYDNLwCU5zQyIHeWaS2oPRuGzeh42A6dihxW6AHFxnHjCsg9Uo/3g1ptihpZ2C6NEV4bzQ==" ></script>
+    <script src="/assets/hyperchannel.js" integrity="sha256-fd2vCPxPsw/qafIivIxwUnptei4WHztzgah72bdx9rE= sha512-tyOaPUUFnNL4SOmR7Mrmjh80NqA7STpsvoxirS3UBAwygfjmZ2z1RMfy7gc7G0OnV5t1YDI3UUrgr9v++QUrlg==" ></script>
 
-    
+    <script>if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js', {scope: '/'})
+    .catch(function(error) {
+      console.error('Error registering service worker:'+error);
+    });
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+      window.location.reload();
+    });
+} else {
+  console.log('service worker not supported');
+}
+</script>
   </body>
 </html>
