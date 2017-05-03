@@ -64,7 +64,8 @@
     "liquid-fire": "0.27.2",
     "loader.js": "^4.0.1",
     "remotestorage-module-kosmos": "67P/remotestorage-module-kosmos",
-    "remotestoragejs": "remotestorage/remotestorage.js#feature/949-noglobal",
+    "remotestorage-module-chat-messages": "67P/remotestorage-module-chat-messages",
+    "remotestoragejs": "remotestorage/remotestorage.js",
     "xmlhttprequest": "^1.8.0"
   }
 }
