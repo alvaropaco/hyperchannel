@@ -2,6 +2,7 @@ import Ember from 'ember';
 import Space from 'hyperchannel/models/space';
 import RemoteStorage from 'npm:remotestoragejs';
 import 'npm:remotestorage-module-kosmos';
+import 'npm:remotestorage-module-chat-messages';
 
 export default Ember.Service.extend({
 
@@ -12,6 +13,7 @@ export default Ember.Service.extend({
 
     let rs =  new RemoteStorage(/* {logging: true} */);
     rs.access.claim('kosmos', 'rw');
+    rs.access.claim('chat-messages', 'rw');
     rs.caching.enable('/kosmos/');
 
     this.set('rsInstance', rs);
