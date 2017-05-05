@@ -2,6 +2,7 @@ import Ember from 'ember';
 import Space from 'hyperchannel/models/space';
 import RemoteStorage from 'npm:remotestoragejs';
 import 'npm:remotestorage-module-kosmos';
+import 'npm:remotestorage-module-xmpp-credentials';
 
 export default Ember.Service.extend({
 
