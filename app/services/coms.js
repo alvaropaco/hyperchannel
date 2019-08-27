@@ -153,24 +153,25 @@ export default Service.extend({
     }
   },
 
-  updateChannelUserList(message) {
-    let channel;
-    switch(message.context) {
-      case 'irc':
-        channel = this.getChannelById(message.actor['@id']);
-        break;
-      case 'xmpp':
-        channel = this.getChannel(message.target['@id'], message.actor['@id']);
-        break;
-    }
-
-    if (channel) {
-      channel.set('connected', true);
-      if (Array.isArray(message.object.members)) {
-        channel.set('userList', message.object.members);
-      }
-    }
-  },
+  // updateChannelUserList(message) {
+  //   let channel;
+  //   switch(message.context) {
+  //     case 'irc':
+  //       channel = this.getChannelById(message.actor['@id']);
+  //       break;
+  //     case 'xmpp':
+  //       channel = this.getChannel(message.target['@id'], message.actor['@id']);
+  //       break;
+  //   }
+  //
+  //   if (channel) {
+  //     channel.set('connected', true);
+  //     if (Array.isArray(message.object.members)) {
+  //       // channel.set('userList', message.object.members);
+  //       channel.add('userList', message.actor.displayName);
+  //     }
+  //   }
+  // },
 
   addUserToChannelUserList(message) {
     const channel = this.getChannelById(message.target['@id']);
@@ -434,11 +435,6 @@ export default Service.extend({
     this.log(`${message.context}_message`, 'SH message', message);
 
     switch(message['@type']) {
-      case 'observe':
-        if (message.object['@type'] === 'attendance') {
-          this.updateChannelUserList(message);
-        }
-        break;
       case 'join':
         this.handleChannelJoin(message);
         break;
@@ -455,6 +451,9 @@ export default Service.extend({
         break;
       case 'update':
         switch(message.object['@type']) {
+          case 'attendance':
+            this.addUserToChannelUserList(message.actor.displayName);
+            break;
           case 'topic':
             this.updateChannelTopic(message);
             break;
